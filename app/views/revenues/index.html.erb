@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header"><%= t ".this_week_revenue" %></div>
+      <div class="card-block">
+        <div class="container text-center">
+          <% if @reservations.blank? %>
+            <h3><%= t ".you_dont_have_any_reservation" %></h3><br>
+            <%= link_to t(".become_a_host_to_earn_income"), new_room_path, class: "btn btn-normal" %>
+          <% else %>
+            <%= column_chart @this_week_revenue, colors: ["#00A699"] %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

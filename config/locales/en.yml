@@ -1,0 +1,192 @@
+en:
+  shared:
+    navbar:
+      login: "Login"
+      signup: "Sign Up"
+      manage_listing: "Manage Listing"
+      logout: "Log Out"
+      edit_profile: "Edit Profile"
+      your_trips: "Your Trips"
+      your_reservations: "Your Reservations"
+      list_your_space: "List Your Space"
+      airbnb: "AirBnb"
+      become_a_host: "Become a host"
+      any_where: "Any where"
+      dashboard: "Dashboard"
+      host_calendar: "Host Calendar"
+      conversations: "Conversations"
+      revenues: "Revenues"
+  devise:
+    sessions:
+      new:
+        sign_in_with_facebook: "Sign in with Facebook"
+    registrations:
+      new:
+        sign_in_with_facebook: "Sign in with Facebook"
+      edit:
+        your_profile: "Your Profile"
+        edit_profile: "Edit Profile"
+        view_my_profile: "View My Profile"
+  photos:
+    create:
+      saved: "Saved"
+  reservations:
+    create:
+      request_sent_successfully: "Request sent successfully"
+      book_fail: "Book Fail"
+      you_cannot_book_your_own_property: "You cannot book your own property"
+      reservation_created_successfully: "Reservation created successfully"
+      cannot_make_a_reservation: "Cann't make a reservation"
+    form:
+      book_now: "Book Now"
+      price: "Price"
+      total: "Total"
+      night(s): "Night(s)"
+      request_now: "Request now"
+    your_trips:
+      your_listings: "Your Listings"
+      your_trips: "Your Trips"
+      your_reservation: "Your Reservation"
+    your_reservations:
+      your_listings: "Your Listings"
+      your_trips: "Your Trips"
+      your_reservations: "Your Reservations"
+
+  rooms:
+    you_dont_have_permission: "You don't have permission"
+    create:
+      saved: "Saved"
+      something_went_wrong: "Something went wrong."
+    index:
+      your_listings: "Your Listings"
+      your_trips: "Your Trips"
+      your_reservations: "Your Reservations"
+    new:
+      accommodate: "Accommodate"
+      home_type: "Home Type"
+      room_type: "Room Type"
+      bath_room: "Bath Room"
+      bed_room: "Bed Room"
+      booking_type: "Booking Type"
+      create_my_room: "Create My Room"
+    show:
+      about_this_room: "About this room"
+      amenities: "Amenities"
+      tv: "TV"
+      kitchen: "Kitchen"
+      air_condition: "Aircondition"
+      heating: "Heating"
+      internet: "Internet"
+      near_by: "Near by"
+      map: "Map"
+      this_room_doesnt_exist: "This room doesn't exist"
+    update:
+      saved: "Saved"
+    room_menu:
+      listing: "Listing"
+      photos: "Photos"
+      amenities: "Amenities"
+      location: "Location"
+      pricing: "Pricing"
+      description: "Description"
+      publish: "Publish"
+    photo_upload:
+      photos: "Photos"
+      select_photos: "Select Photos"
+      add_photos: "Add Photos"
+    description:
+      description: "Description"
+      save: "Save"
+      what_is_your_listing_name: "What is your listing name?"
+      summary_of_your_house: "Summary of your house"
+      summary: "Summary"
+      listing_name: "Listing name"
+    listing:
+      listing: "Listing"
+      accommodate: "Accommodate"
+      home_type: "Home Type"
+      room_type: "Room Type"
+      bath_room: "Bath Room"
+      bed_room: "Bed Room"
+      save: "Save"
+    pricing:
+      pricing: "Pricing"
+      price: "Price"
+      save: "Save"
+      eg_100: "Eg: 100$"
+    amenities:
+      amenities: "Amenities"
+      tv: "TV"
+      kitchen: "Kitchen"
+      air: "Aircondition"
+      heating: "Heating"
+      internet: "Internet"
+      save: "Save"
+    location:
+      location: "Location"
+      save: "Save"
+      address: "Address"
+      what_is_your_address: "What is your address?"
+
+  reviews:
+    guest_form:
+      review_your_host: "Review host"
+      add_review: "Add review"
+    host_form:
+      review_your_guest: "Review guest"
+      add_review: "Add review"
+
+  users:
+    show:
+      review_form_hosts: "Review from hosts"
+      review_form_guests: "Review from guests"
+      send_message: "Send Message"
+
+  pages:
+    home:
+      search: "Search"
+      where_are_you_going: "Where are you going?"
+      end_date: "End date"
+      start_date: "Start date"
+    search:
+      end_date: "End date"
+      start_date: "Start date"
+      amenities: "Amenities"
+      tv: "TV"
+      kitchen: "Kitchen"
+      air: "Aircondition"
+      heating: "Heating"
+      internet: "Internet"
+      entire_room: "Entire room"
+      share: "Share"
+      private: "Private"
+      min_price: "Min price"
+      max_price: "Max price"
+      price_range: "Price range"
+      submit: "Submit"
+      more_filters: "More filters"
+      not_found_any_rooms: "Not found any rooms"
+
+  dashboards:
+    index:
+      your_listings: "Your Listings"
+      verification: "Verification"
+      notification: "Notification"
+  calendars:
+    host:
+      your_listing: "Your Listing"
+  conversations:
+    index:
+      your_conversations: "Your conversations"
+  messages:
+    index:
+      you_dont_have_permission_to_view_this: "You dont have permission to view this"
+      view_profile: "View profile"
+      conversation_with: "Conversation with"
+      add_a_personal_message: "Add a presonal message"
+      send_message: "Send message"
+  revenues:
+    index:
+      this_week_revenue: "This week's revenues"
+      you_dont_have_any_reservation: "You don't have any reservations"
+      become_a_host_to_earn_income: "Become a host to earn income"

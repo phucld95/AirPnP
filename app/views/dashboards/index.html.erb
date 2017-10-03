@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="center">
+      <%= image_tag avatar_url(current_user), class: "avatar-full" %>
+    </div>
+    <div class="card">
+      <div class="card-header"><%= t ".verification" %></div>
+      <div class="card-block">
+        <ul class="sidebar-list">
+          <!-- change it after verfiy email, confirmation token -->
+          <% if !current_user.provider %>
+            <li>Email Address <span class="pull-right"><i class="fa fa-check-circle-o"></i></span></li>
+          <% end %>
+          <% if current_user.provider %>
+            <li>Facebook <span class="pull-right"><i class="fa fa-check-circle-o"></i></span></li>
+          <% end %>
+          <li>Phone number <span class="pull-right"><i class="fa fa-check-circle-o"></i></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <!-- Notification -->
+    <div class="card">
+      <div class="card-header"><%= t ".notification" %></div>
+      <div class="card-block">
+        <%= link_to notifications_path do %>
+          You have <span id="number_of_unread"><%= current_user.unread %></span> notification(s)
+        <% end %>
+      </div>
+    </div>
+    <br>
+    <!-- Your Listing -->
+    <div class="card">
+      <div class="card-header"><%= t ".your_listings" %>(<%= @rooms.length if @rooms != nil %>)</div>
+      <div class="card-block">
+        <%= render partial: "rooms/rooms", locals: {rooms: @rooms} %>
+      </div>
+    </div>
+  </div>
+</div>

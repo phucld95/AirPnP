@@ -1,0 +1,38 @@
+// Calendar
+.fc-content.Waiting {
+  background-color: #C9CC6D;
+}
+
+.fc-past {
+  background-color: lightgray;
+}
+
+.fc-day {
+  position: relative;
+}
+
+.fc-content {
+  background-color: #00A699;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.fc-event {
+  border: 0px;
+  background-color: transparent;
+}
+
+.fc-title {
+  font-size: 14px;
+  position: relative;
+  color: #ffffff;
+  top: 7px;
+  left: 20px;
+}
+
+.day-price {
+  position: absolute;
+  color: #EAA90B;
+  bottom: 2px;
+  right: 2px;
+}

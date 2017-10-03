@@ -1,0 +1,68 @@
+<div class="card">
+  <div class="card-header">
+    <%= t ".create_you_beautiful_place" %>
+  </div>
+  <div class="card-block">
+    <div class="container">
+      <%= form_for @room do |f| %>
+        <div class="row">
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label><%= t ".home_type" %></label>
+              <%= f.select :home_type, [["Apartment", "Apartment"], ["House", "House"],
+                ["Bed & Breakfast", "Bed & Breakfast"]], id: "home_type", prompt: "Select...",
+                class: "form-control" %>
+            </div>
+
+          </div>
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label><%= t ".room_type" %></label>
+              <%= f.select :room_type, [["Entire", "Entire"], ["Private", "Private"],
+                ["Share", "Share"]], id: "room_type", prompt: "Select...",
+                class: "form-control" %>
+            </div>
+
+          </div>
+
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label><%= t ".booking_type" %></label>
+              <%= f.select :instant, Room.instants.map {|key, value| [key.humanize, key]}, selected: "Instant", prompt: "Select...",
+                class: "form-control" %>
+            </div>
+
+          </div>
+
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label><%= t ".accommodate" %></label>
+              <%= f.select :accommodate, [["1", 1], ["2", 2],
+                ["3", 3], ["4+", 4]], id: "accommodate", prompt: "Select...",
+                class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label><%= t ".bed_room" %></label>
+              <%= f.select :bed_room, [["1", 1], ["2", 2],
+                ["3", 3], ["4+", 4]], id: "bed_room", prompt: "Select...",
+                class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label><%= t ".bath_room" %></label>
+              <%= f.select :bath_room, [["1", 1], ["2", 2],
+                ["3", 3], ["4+", 4]], id: "bath_room", prompt: "Select...",
+                class: "form-control" %>
+            </div>
+          </div>
+        </div>
+        <div>
+          <%= f.submit t(".create_my_room"), class: "btn btn-normal" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
