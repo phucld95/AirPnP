@@ -106,13 +106,26 @@
         <% end %>
       </div>
 
-      <div class="row" id="room_listing">
+      
+    </div>
+    <div class="clearfix">
+      <div class="btn-group" style="float: right;">
+        <button type="button" class="btn filter-listing-interaction" autofocus="autofocus">
+          <i class="fa fa-th-large" style="color: #666666"></i>
+        </button>
+        <button type="button" class="btn filter-listing-interaction">
+          <i class="fa fa-th-list" style="color: #666666"></i>
+        </button>
+        <button type="button" class="btn filter-listing-interaction">
+          <i class="fa fa-map-o" style="color: #666666"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row" id="room_listing">
         <% if !@arrRooms.nil? %>
           <%= render partial: "rooms/rooms", locals: {rooms: @arrRooms} %>
         <% end %>
       </div>
-    </div>
-
   </div>
   <div id="right">
     <!-- Google Map -->

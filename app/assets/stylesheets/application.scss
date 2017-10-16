@@ -411,17 +411,14 @@ body {
 }
 
 #left {
-  padding: 10px 400px 10px 20px;
-  // overflow: scroll;
-  height: 100%;
 }
 
 #right {
-  position: fixed;
-  top: 80px;
-  right: 0;
-  width: 450px;
-  height: 100%;
+  //position: fixed;
+  //top: 80px;
+  //right: 0;
+  //width: 450px;
+  //height: 100%;
 }
 
 .map_price {
@@ -471,4 +468,13 @@ body {
   position: relative;
   top: -15px;
   left: -15px;
+}
+.filter-listing-interaction {
+  padding: 5px 20px;
+  background: #fff;
+  border-radius: 2px;
+  margin-right: 3px;
+  margin-bottom: 12px;
+}
+.room-item-result {
 }
