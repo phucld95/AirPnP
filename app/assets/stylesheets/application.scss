@@ -478,3 +478,34 @@ body {
 }
 .room-item-result {
 }
+.navbar-light .navbar-brand, .navbar-light .navbar-toggler{
+  margin-left: 20px;
+}
+.dropdown-menu {
+  left: -50px;
+}
+.navbar-brand {
+  color: $brand-color !important;
+  font-size: 2em;
+  font-weight: 400;
+
+}
+.navbar-toggleable-md .navbar-collapse{
+  margin-top: 7px;
+  margin-right: 15px;
+}
+.text-babu {
+  color: $text-babu-color;
+}
+
+.icon-babu {
+  color: $icon-babu-color;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.text-red, .icon-red {
+  color: $text-red-color;
+}

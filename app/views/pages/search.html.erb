@@ -15,7 +15,7 @@
       <div class="collapse" id="collapsePanel" style="margin-left: 15px">
         <%= search_form_for @search, url: search_path, remote: true do |f|%>
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
               <label><%= t(".price_range") %></label>
               <div id="slider-range"></div>
             </div>
@@ -23,7 +23,7 @@
               <label><%= t(".min_price") %></label>
               <%= f.text_field :price_gteq, class: "form-control" %>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <label><%= t(".max_price") %></label>
               <%= f.text_field :price_lteq, class: "form-control" %>
             </div>
