@@ -16,6 +16,7 @@ class GuestReviewsController < ApplicationController
       ).first
       if @has_reviewed.nil?
         # Allow to review
+        byebug
         @guest_review = current_user.guest_reviews.create guest_review_params
         flash[:success] = "Review created..."
       else
