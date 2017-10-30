@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @rooms = Room.where(active: true).limit(3)
+    @rooms = Room.where(active: true).limit(4).order(id: :desc)
     @cities = City.all
   end
 

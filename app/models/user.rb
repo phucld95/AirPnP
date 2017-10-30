@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :notifications
 
   def self.from_omniauth(auth)
+    Rails.logger.info "email : #{auth.info.email}"
     user = User.where(email: auth.info.email).first
     if user
       return user
