@@ -4,7 +4,7 @@ class Room < ApplicationRecord
   has_many :photos
   has_many :reservations
 
-  has_many :guest_reviews
+  has_many :reviews
   has_many :calendars
 
   geocoded_by :address
@@ -26,6 +26,10 @@ class Room < ApplicationRecord
   end
 
   def average_rating
-    guest_reviews.count == 0 ? 0 : guest_reviews.average(:star).round(2).to_i
+    if reviews.average(:star).present?
+      reviews.count == 0 ? 0 : reviews.average(:star).round(2).to_i
+    else
+      return 0
+    end
   end
 end

@@ -23,7 +23,7 @@ class RoomsController < ApplicationController
 
   def show
     @photos = @room.photos
-    @guest_reviews = @room.guest_reviews
+    @guest_reviews = @room.reviews
   end
 
   def listing
@@ -64,7 +64,6 @@ class RoomsController < ApplicationController
   end
 
   private
-
   def preview
     start_date = Date.parse params[:start_date]
     end_date = Date.parse params[:end_date]

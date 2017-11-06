@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :calendars
   end
 
+  resources :reviews, only: [:create, :destroy]
   resources :guest_reviews, only: [:create, :destroy]
   resources :host_reviews, only: [:create, :destroy]
 

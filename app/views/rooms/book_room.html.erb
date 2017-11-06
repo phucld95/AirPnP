@@ -145,8 +145,8 @@
         <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script>
           function initialize(){
-              var location = {lat: <%= @room.latitude %>, lng: (360 + <%= @room.longitude %>)};
-              var map = new google.maps.Map(document.getElementById('map'), {
+            var location = {lat: <%= @room.latitude %>, lng: <%= @room.longitude %>};
+            var map = new google.maps.Map(document.getElementById('map'), {
               center: location,
               zoom: 14
             });
@@ -172,20 +172,18 @@
     <!-- Near By -->
     <h3 class="room-title"><%= t ".near_by" %></h3>
     <div class="row">
-      <% if @room.longitude.present? %>
-        <% for room in @room.nearbys(10) %>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-header preview">
-                <%= image_tag room.cover_photo(:medium) %>
-              </div>
-              <div class="card-block">
-                <%= link_to room.listing_name, room %> <br>
-                (<%= room.distance.round(2) %> kms away)
-              </div>
+      <% for room in @room.nearbys(10) %>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header preview">
+              <%= image_tag room.cover_photo(:medium) %>
+            </div>
+            <div class="card-block">
+              <%= link_to room.listing_name, room %> <br>
+              (<%= room.distance.round(2) %> kms away)
             </div>
           </div>
-        <% end %>
+        </div>
       <% end %>
     </div>
   </div>
@@ -203,3 +201,4 @@
     score: <%= @room.average_rating %>
   });
 </script>
+

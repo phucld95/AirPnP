@@ -12,7 +12,7 @@
         <h4 class="modal-title"><%= t ".review_your_host" %></h4>
       </div>
       <div class="modal-body">
-        <%= form_for current_user.guest_reviews.new do |f| %>
+        <%= form_for current_user.reviews.new do |f| %>
           <div class="form-group text-center">
             <div id="stars"></div>
           </div>
@@ -23,7 +23,7 @@
 
           <%= f.hidden_field :room_id, value: reservation.room.id %>
           <%= f.hidden_field :reservation_id, value: reservation.id %>
-          <%= f.hidden_field :host_id, value: reservation.room.user.id %>
+          <%= f.hidden_field :user_id, value: reservation.room.user.id %>
 
           <div class="text-center">
             <%= f.submit t(".add_review"), class: "btn btn-normal" %>
@@ -37,7 +37,7 @@
 <script>
   $('#stars').raty({
     path: '/assets',
-    scoreName: 'guest_review[star]',
+    scoreName: 'review[star]',
     score: 1
   });
 </script>
