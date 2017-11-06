@@ -84,15 +84,13 @@ ActiveRecord::Schema.define(version: 20170816180016) do
     t.integer "star"
     t.integer "room_id"
     t.integer "reservation_id"
-    t.integer "guest_id"
-    t.integer "host_id"
+    t.integer "user_id"
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["guest_id"], name: "index_reviews_on_guest_id"
-    t.index ["host_id"], name: "index_reviews_on_host_id"
     t.index ["reservation_id"], name: "index_reviews_on_reservation_id"
     t.index ["room_id"], name: "index_reviews_on_room_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "rooms", force: :cascade do |t|

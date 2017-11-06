@@ -43,9 +43,9 @@
 
       <br>
       <% if @room.Instant? %>
-        <%= f.submit t(".book_now"), id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
+          <%= f.submit t(".book_now"), id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
       <% else %>
-        <%= f.submit t(".request_now"), id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
+          <%= f.submit t(".request_now"), id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
       <% end %>
     <% end %>
   </div>

@@ -6,13 +6,13 @@
   <% @guest_reviews.order(id: :desc).each do |review| %>
     <div class="row" style="width: 100%">
       <div class="col-md-3 text-center">
-        <%= image_tag avatar_url(review.guest), class: "rounded-circle avatar-medium" %> <br>
-        <strong><%= review.guest.fullname %></strong>
+        <%= image_tag avatar_url(review.user), class: "rounded-circle avatar-medium" %> <br>
+        <strong><%= review.user.fullname %></strong>
       </div>
 
       <div class="col-md-9">
         <div id="star_<%= review.id %>"></div>
-        <% if current_user && current_user == review.guest %>
+        <% if current_user && current_user == review.user %>
           <span class="pull-right">
             <%= link_to review, method: :delete, data: {confirm: "Are you sure?"} do %>
               <i class="fa fa-trash-o fa-lg"></i>
