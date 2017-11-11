@@ -1,6 +1,5 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def facebook
-    Rails.logger.info "dmmmmm"
     @user = User.from_omniauth(request.env["omniauth.auth"])
 
     if @user.persisted?

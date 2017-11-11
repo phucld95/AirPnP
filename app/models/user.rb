@@ -9,12 +9,10 @@ class User < ApplicationRecord
 
   has_many :rooms
   has_many :reservations
-  has_many :guest_reviews, class_name: GuestReview.name, foreign_key: "guest_id"
-  has_many :host_reviews, class_name: HostReview.name, foreign_key: "host_id"
+  has_many :reviews
   has_many :notifications
 
   def self.from_omniauth(auth)
-    Rails.logger.info "email : #{auth.info.email}"
     user = User.where(email: auth.info.email).first
     if user
       return user

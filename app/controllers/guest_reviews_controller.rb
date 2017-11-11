@@ -16,8 +16,11 @@ class GuestReviewsController < ApplicationController
       ).first
       if @has_reviewed.nil?
         # Allow to review
+
+
+        #Bug rails khôgn hiểu được kế thừa trong model.
         byebug
-        @guest_review = current_user.guest_reviews.create guest_review_params
+        @guest_review = current_user.reviews.create guest_review_params
         flash[:success] = "Review created..."
       else
         # already reviewed
@@ -38,6 +41,6 @@ class GuestReviewsController < ApplicationController
 
   private
   def guest_review_params
-    params.require(:guest_review).permit(:comment, :star, :room_id, :reservation_id, :host_id)
+    params.require(:guest_review).permit(:comment, :star, :room_id, :reservation_id, :user_id)
   end
 end

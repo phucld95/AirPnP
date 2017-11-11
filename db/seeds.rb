@@ -57,10 +57,19 @@ City.create! name: "Cairo",
   image: "http://www.youregypttours.com/img/p/308-665.jpg"
 
 City.create! name: "Paris",
-  image: "http://cdn.getyourguide.com/img/tour_img-366731-21.jpg"
+  image: "https://travel.com.vn/images/destination/Large/dg_150723_Eiffel-Tower-Paris-France.jpg"
 
 City.create! name: "New york",
   image: "https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"
 
 City.create! name: "Kyoto",
   image: "https://i1.wp.com/media.boingboing.net/wp-content/uploads/2014/11/P14202493.jpg?w=970"
+
+p "seeding 6 reviews"
+
+for i in 1..20
+  Review.create! comment: "Nice!", star: 5,room_id: i, user_id: i
+  Review.create! comment: "Nice!", star: 3,room_id: i, user_id: 20 - i
+end
+
+
