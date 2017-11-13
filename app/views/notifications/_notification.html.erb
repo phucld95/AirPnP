@@ -1,7 +1,13 @@
 <div class="card">
   <div class="card-block">
+    <% if notification.type_message.present? && notification.type_message == 1 %>
+      <% conversation = Conversation.find_by id: notification.id_object  %>
+      <% messages = conversation.messages  %>
+        <%= link_to notification.content, conversation_messages_path(notification.id_object)%>
+    <% else  %>
       <strong><%= notification.content %></strong>
-      <span class="pull-right"><%= notification.created_at.to_formatted_s(:short) %></span>
+    <% end  %>
+    <span class="pull-right"><%= notification.created_at.to_formatted_s(:short) %></span>
   </div>
 </div>
 <br>

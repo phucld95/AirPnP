@@ -7,13 +7,10 @@ class ConversationsController < ApplicationController
 
   def create
     if Conversation.between(params[:sender_id], params[:recipient_id]).present?
-      logger.info "dmmmm"
       @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
     else
-      logger.info "#{}"
       @conversation = Conversation.create(conversation_params)
     end
-    logger.info "dmmmmmmmmmmmmmmm  #{@conversation.id}"
     redirect_to conversation_messages_path(@conversation)
   end
 
