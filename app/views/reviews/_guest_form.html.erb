@@ -14,7 +14,7 @@
       <div class="modal-body">
         <%= form_for current_user.reviews.new do |f| %>
           <div class="form-group text-center">
-            <div id="stars"></div>
+            <div class="stars"></div>
           </div>
 
           <div class="form-group">
@@ -35,7 +35,7 @@
 </div>
 
 <script>
-  $('#stars').raty({
+  $('.stars').raty({
     path: '/assets',
     scoreName: 'review[star]',
     score: 1
