@@ -69,7 +69,5 @@ p "seeding 6 reviews"
 
 for i in 1..20
   Review.create! comment: "Nice!", star: 5,room_id: i, user_id: i
-  Review.create! comment: "Nice!", star: 3,room_id: i, user_id: 20 - i
+  Review.create! comment: "Nice!", star: 3,room_id: i, user_id: 21 - i
 end
-
-
