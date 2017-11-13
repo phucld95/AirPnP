@@ -42,14 +42,5 @@
         <%= render "reviews/guest_list" %>
       </div>
     <% end %>
-
-    <br>
-
-    <% if @host_reviews != nil && @host_reviews.count > 0 %>
-      <h4><%= t ".review_form_hosts" %> (<%= @host_reviews.count %>)</h4>
-      <div class="row">
-        <%= render "reviews/host_list" %>
-      </div>
-    <% end %>
   </div>
 </div>
