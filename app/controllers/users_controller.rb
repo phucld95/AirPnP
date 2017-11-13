@@ -5,5 +5,6 @@ class UsersController < ApplicationController
 
     # display all the guest reviews to host (if rhis user is a host)
     @guest_reviews = Review.where(user_id: @user.id)
+
   end
 end
