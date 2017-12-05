@@ -22,9 +22,11 @@
 
             <div class="form-group">
               <div class="btn-group" data-toggle="buttons-radio">
-                <%= f.collection_radio_buttons :status, Calendar.statuses, :first, :first, checked: Calendar.statuses.first do |b|
+                <%=
+                  f.collection_radio_buttons  :status, Calendar.statuses, :first, :first, checked: Calendar.statuses.first do |b|
                   b.radio_button + b.label {b.text.split("_").join(" ").capitalize}
-                end %>
+                end
+                %>
               </div>
             </div>
 
